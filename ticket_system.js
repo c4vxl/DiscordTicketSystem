@@ -66,6 +66,10 @@ function openTicket(guild, user, ticketTitle, ticketDescription="***<Not set>***
             {
                 id: guild.roles.cache.map(r => r).find(r => r.name == TICKET_ROLE_NAME).id,
                 allow: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.SendMessages]
+            },
+            {
+                id: user.id,
+                allow: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.SendMessages]
             }
         ]
     }).then(channel => {
