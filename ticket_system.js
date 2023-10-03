@@ -49,7 +49,7 @@ function register(client) {
             if (description == null) openTicket(interaction.guild, interaction.user, title)
             else openTicket(interaction.guild, interaction.user, title, description)
         
-            interaction.reply(`Opening ticket...`)
+            interaction.reply({ content: "Opening Ticket...", ephemeral: true })
         }
     })
 }
